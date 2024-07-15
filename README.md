@@ -8,7 +8,6 @@ This project presents a deep learning-based solution for detecting and restoring
 ## Dataset
 The dataset used for training and evaluating this model can be accessed through the following link:
 
-<a href="https://drive.google.com/drive/folders/1Fr4uqxEnN-moEgxF7hwqJMjUQHahuvLY?usp=drive_link">Link to Dataset</a>
 https://drive.google.com/drive/folders/1Fr4uqxEnN-moEgxF7hwqJMjUQHahuvLY?usp=drive_link
 
 ## Model Architecture
