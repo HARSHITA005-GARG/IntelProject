@@ -14,7 +14,12 @@ import keras
 # ---------------------------
 @st.cache_resource
 def load_model():
-    model = keras.saving.load_model("hf://Harshita005/pixel_detection_model")
+    model_path = hf_hub_download(
+        repo_id="Harshita005/pixel_detection_model",  
+        filename="pixel_detection_final_model.keras"                   
+    )
+    # Load it using Keras
+    model = keras.models.load_model(model_path)
     return model
 
 model = load_model()
