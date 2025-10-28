@@ -4,16 +4,25 @@ import numpy as np
 from PIL import Image
 import cv2
 import io
+from huggingface_hub import hf_hub_download
 
 # ---------------------------
 # Load model once
 # ---------------------------
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model("pixel_detection_final_model.keras")
+    # Download model from Hugging Face Hub
+    model_path = hf_hub_download(
+        repo_id="Harshita005/pixel_detection_model",  
+        filename="pixel_detection_model.keras"                    
+    )
+    model = tf.keras.models.load_model(model_path)
     return model
 
 model = load_model()
+st.success("✅ Model loaded successfully from Hugging Face!")
+
+
 IMG_SIZE = 224
 
 # ---------------------------
