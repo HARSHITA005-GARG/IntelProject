@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints
+*.DS_Store
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Model checkpoints and weights
+checkpoints/
+*.h5
+*.keras
+*.ckpt
+*.ckpt.*
+
+# Dataset and temporary files
+data/
+datasets/
+tmp/
+temp/
+*.zip
+*.tar.gz
+
+# Streamlit cache and logs
+.streamlit/
+logs/
+.cache/
+__cache__/
+
+# TensorBoard logs
+logs/
+tensorboard/
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS-specific
+Thumbs.db
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Environment files
+.env
+*.env
+
+# Build artifacts
+dist/
+build/
+
+# Output images and results
+outputs/
+results/
