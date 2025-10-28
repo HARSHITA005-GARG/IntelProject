@@ -10,7 +10,7 @@ import io
 # ---------------------------
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model("pixel_detection.weights.h5")
+    model = tf.keras.models.load_model("pixel_detection_final_model.keras")
     return model
 
 model = load_model()
