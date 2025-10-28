@@ -5,18 +5,16 @@ from PIL import Image
 import cv2
 import io
 from huggingface_hub import hf_hub_download
-
+import os
+os.environ["KERAS_BACKEND"] = "jax"
+	
+import keras
 # ---------------------------
 # Load model once
 # ---------------------------
 @st.cache_resource
 def load_model():
-    # Download model from Hugging Face Hub
-    model_path = hf_hub_download(
-        repo_id="Harshita005/pixel_detection_model",  
-        filename="pixel_detection_model.keras"                    
-    )
-    model = tf.keras.models.load_model(model_path)
+    model = keras.saving.load_model("hf://Harshita005/pixel_detection_model")
     return model
 
 model = load_model()
